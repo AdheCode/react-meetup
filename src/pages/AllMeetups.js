@@ -1,5 +1,5 @@
 import MeetupList from "../components/meetups/MeetupList";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 const DUMMY_DATA = [
   {
@@ -23,36 +23,36 @@ const DUMMY_DATA = [
 ];
 
 function AllMeetupPage() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadedMeetups, setloadedMeetups] = useState([]);
+  // const [isLoading, setIsLoading] = useState(true);
+  // const [loadedMeetups, setloadedMeetups] = useState([]);
 
-  useEffect(()=>{
-    setIsLoading(true);
-    fetch("https://dgs-test-c2437.firebaseio.com/meetups.json")
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => {
-        const meetups = [];
-        for(const key in data){
-          const meetup = {
-            id:key,
-            ...data[key]
-          };
-          meetups.push(meetup);
-        }
-        setIsLoading(false);
-        setloadedMeetups(meetups);
-      });
+  // useEffect(()=>{
+  //   setIsLoading(true);
+  //   fetch("https://dgs-test-c2437.firebaseio.com/meetups.json")
+  //     .then((response) => {
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       const meetups = [];
+  //       for(const key in data){
+  //         const meetup = {
+  //           id:key,
+  //           ...data[key]
+  //         };
+  //         meetups.push(meetup);
+  //       }
+  //       setIsLoading(false);
+  //       setloadedMeetups(meetups);
+  //     });
 
-  },[]);
+  // },[]);
 
-if (isLoading) {
-  return <section>
-    <p>Loading...</p>
-  </section>
+// if (isLoading) {
+//   return <section>
+//     <p>Loading...</p>
+//   </section>
   
-}
+// }
 
   return (
     <section>

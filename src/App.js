@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import AllMeetupPage from "./pages/AllMeetups";
 import FavoritePage from "./pages/Favorites";
 import NewMeetupPage from "./pages/NewMeetup";
-import MainNavigation from "./components/layout/MainNavigation";
+// import MainNavigation from "./components/layout/MainNavigation";
 import Layout from "./components/layout/Layout";
 
 function App() {
