@@ -5,7 +5,7 @@ function NewMeetupPage() {
   const history = useHistory();
 
   function addMeetupHandler(meetupData) {
-    fetch("https://dgs-test-c2437.firebaseio.com/meetups.json", {
+    fetch("https://dgs-dev.firebaseio.com/meetups.json", {
       method: "POST",
       body: JSON.stringify(meetupData),
       headers: {
